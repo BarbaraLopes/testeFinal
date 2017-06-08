@@ -28,25 +28,6 @@ public class LinkedListIterator_ESTest extends LinkedListIterator_ESTest_scaffol
   }
 
   @Test(timeout = 4000)
-  public void test1()  throws Throwable  {
-      Object object0 = new Object();
-      Node<Object> node0 = new Node<Object>(object0);
-      LinkedListIterator<Object> linkedListIterator0 = new LinkedListIterator<Object>(node0);
-      linkedListIterator0.next();
-      // Undeclared exception!
-      try { 
-        linkedListIterator0.next();
-        fail("Expecting exception: NoSuchElementException");
-      
-      } catch(NoSuchElementException e) {
-         //
-         // no message in exception (getMessage() returned null)
-         //
-         assertThrownBy("tutorial.LinkedListIterator", e);
-      }
-  }
-
-  @Test(timeout = 4000)
   public void test2()  throws Throwable  {
       Node<Object> node0 = new Node<Object>((Object) null);
       LinkedListIterator<Object> linkedListIterator0 = new LinkedListIterator<Object>(node0);
@@ -61,19 +42,4 @@ public class LinkedListIterator_ESTest extends LinkedListIterator_ESTest_scaffol
       assertFalse(boolean0);
   }
 
-  @Test(timeout = 4000)
-  public void test4()  throws Throwable  {
-      LinkedListIterator<Object> linkedListIterator0 = new LinkedListIterator<Object>((Node<Object>) null);
-      // Undeclared exception!
-      try { 
-        linkedListIterator0.remove();
-        fail("Expecting exception: UnsupportedOperationException");
-      
-      } catch(UnsupportedOperationException e) {
-         //
-         // no message in exception (getMessage() returned null)
-         //
-         assertThrownBy("tutorial.LinkedListIterator", e);
-      }
-  }
 }
